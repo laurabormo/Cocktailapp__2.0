@@ -1,5 +1,8 @@
 <template>
   <div id="saved">
+  <div v-if="drinks==0 ">
+      <h3>There is no saved drink </h3>
+    </div>
     <md-list>
       <div v-for="drink in drinks" :key="drink.idDrink">
         <md-list-item :to="'/drink/' + drink.idDrink">
